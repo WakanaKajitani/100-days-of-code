@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>log.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<h1 id="100-days-of-code---%E5%AD%A6%E7%BF%92%E3%83%AD%E3%82%B0">100 Days Of Code - 学習ログ</h1>
+<h2 id="day8-20200609-tue">Day8 2020/06/09 Tue</h2>
+<p><strong>学習時間</strong>: 6h</p>
+<p><strong>今日の進捗</strong>: ProgateのRuby On Rails　のコース開始
+Rubyのアプリケーション開発環境VSCodeで整える。</p>
+<p><strong>思ったこと</strong>: JavaのServlet,JSPのあたりの知識を3年前の新人研修の時に触れて以来放置してたけど、
+そこの予備知識があったらからRuby On Railsは面白く感じた。自分で使ってみたい！</p>
+<p>今日一番感動したのは、PCのコマンドラインのプロンプトを自分好みに変更できたこと。
+入社前の3年前は絶対わからなかった。Linuxのファイル権限とかの知識がないと詰まる感じの設定だったから。
+実感なかったけど、なんかかんだ成長してたんだなぁって思えた。</p>
+<p><strong>リンク</strong>
+<a href="https://twitter.com/neanearly/status/1270131830281269249?s=20">コマンドプロンプト BEF</a>
+<a href="https://twitter.com/neanearly/status/1270163105327136768?s=20">コマンドプロンプト AFT</a>
+<a href="https://twitter.com/neanearly/status/1270247047619211266?s=20">Twitter</a></p>
+<h2 id="day7-20200608-mon">Day7 2020/06/08 Mon</h2>
+<p><strong>学習時間</strong>: 2h</p>
+<p><strong>今日の進捗</strong>: ProgateのRubyコース 修了</p>
+<p><strong>思ったこと</strong>: オブジェクト指向言語の基本構文はこれで3つ目(Java, Python, これ)なので、すんなりわかった。</p>
+<p><strong>リンク</strong>
+<a href="https://twitter.com/neanearly/status/1269952336643813377?s=20">Twitter</a></p>
+<h2 id="day6-20200607-sun">Day6 2020/06/07 Sun</h2>
+<p><strong>学習時間</strong>: 1h</p>
+<p><strong>今日の進捗</strong>: FLEXBOX FROGGYというゲームで遊んだ。</p>
+<p><strong>思ったこと</strong>: 昨日は二日酔いで死んでたので、ドットインストールの動画をみてました。
+あと、ポートフォリオのデザインの参考になりそうな「なるほどデザイン」という本を読んだ。
+手は動かしてないのでカウント外。
+今日は、飲み会で友達が教えてくれた、flexboxを勉強できるコーディングゲームをやりました。
+二日酔いがまだ残ってるので軽めに。</p>
+<p><strong>リンク</strong>
+<a href="https://twitter.com/neanearly/status/1269550800457482241?s=20">Twitter</a>
+<a href="https://flexboxfroggy.com/#ja">FLEXBOX FROGGY</a></p>
+<h2 id="day5-20200605-fri">Day5 2020/06/05　Fri</h2>
+<p><strong>学習時間</strong>: 2h</p>
+<p><strong>今日の進捗</strong>: ProgateのRubyコース開始</p>
+<p><strong>思ったこと</strong>: 3日もおんなじ言語で飽きたので、全く触ったことのないRubyで気分転換。</p>
+<p><strong>リンク</strong>
+<a href="https://twitter.com/neanearly/status/1268801020081004544?s=20">Twitter</a></p>
+<h2 id="day4-20200604-thu">Day4 2020/06/04 Thu</h2>
+<p><strong>学習時間</strong>: 2h</p>
+<p><strong>今日の進捗</strong>: HTML &amp; CSS 道場コース　中級編　修了https://twitter.com/neanearly/status/1268801020081004544?s=20！</p>
+<p><strong>思ったこと</strong>: 3日目にして修了！　正直あと3日くらいかかるかなぁ、くらいの疲労感だったので、思ったより早く終わって嬉しい！
+次はもう、自作のポートフォリオサイトをイメージして作ってみた方がいいと思いつつ、
+設計書をみながらHTMLとCSSを組むという作業は楽しかった。Progateさんありがとうございます！</p>
+<p><strong>リンク</strong>
+<a href="https://twitter.com/neanearly/status/1268514881562525696?s=20">Twitter</a></p>
+<h2 id="day3-20200603-wed">Day3 2020/06/03 Wed</h2>
+<p><strong>学習時間</strong>: 4h</p>
+<p><strong>今日の進捗</strong>: HTML &amp; CSS 道場コース　中級編　続き。
+主要なプロパティ（margin,padding,display,float,transformなど）の使い方などに意識が向き始める。</p>
+<p><strong>思ったこと</strong>: 要素の位置を動かしたい場所に移動させるのはやっぱり苦戦する。
+文章で絵を描こうとしてるんだから、そりゃそうかととも思いつつ、CSSはわからないところを自力で調べて解決できるという自信がついてきた。</p>
+<p><strong>リンク</strong>
+<a href="https://twitter.com/neanearly/status/1268002391938314242?s=20">Twitter</a>
+<a href="https://twitter.com/neanearly/status/1268154667059433474?s=20">Twitter</a></p>
+<h2 id="day2-20200602-tue">Day2 2020/06/02 Tue</h2>
+<p><strong>学習時間</strong>: 3h</p>
+<p><strong>今日の進捗</strong>: HTML &amp; CSS 道場コース　中級編　開始。
+あとは、freeCodeCamp.orgのflexboxのあたりをすこし試してみた。</p>
+<p><strong>思ったこと</strong>： cssは、displayプロパティなどを使い始めるとまだ慣れないことがわかった。</p>
+<p><strong>リンク</strong>
+<a href="https://twitter.com/neanearly/status/1267677642402103296?s=20">Twitter</a>
+<a href="https://twitter.com/neanearly/status/1267747538242637824?s=20">Twitter</a></p>
+<h2 id="day1-20200601-mon">Day1 2020/06/01 Mon</h2>
+<p><strong>学習時間</strong>: 3h</p>
+<p><strong>今日の進捗</strong>: Progate Web開発パス(Node.js)を開始。
+HTML &amp; CSS 道場コース　初級編　を修了　※道場より前のコースは前に修了済み</p>
+<p><strong>思ったこと</strong> この辺りまではすんなりできた。</p>
+<p><strong>リンク</strong>
+<a href="https://twitter.com/neanearly/status/1267439600034668544?s=20">Twitter</a></p>
+<h2 id="day0-20200531-sun">Day0 2020/05/31 Sun</h2>
+<p><strong>今日の進捗</strong>: GitHubのリポジトリをフォーク。</p>
+<p><strong>思ったこと</strong> アカウントは持っていたけど、使ったのは初めて。</p>
+<p><strong>リンク</strong> <a href="https://twitter.com/neanearly/status/1267101954074796032?s=20">Twitter</a></p>
+
+</body>
+</html>
