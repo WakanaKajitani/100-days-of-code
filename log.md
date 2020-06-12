@@ -1,6 +1,15 @@
 # 100 Days Of Code - 学習ログ
+## Day10 2020/06/12 Fri
+**学習時間**: 3時間
 
-## Days9 2020/06/11 Thu
+**今日の進捗**: SQLコース　修了。Ⅱ〜Ⅳ
+
+**思ったこと**: ゲーム感覚で楽しかった。
+
+**リンク**
+[Twitter](https://twitter.com/neanearly/status/1271435143031341056?s=20)
+
+## Day9 2020/06/11 Thu
 **学習時間**: 2 + α時間
 
 **今日の進捗**: ProgateのRuby On Rails　のコース　続き。<br>
