@@ -1,5 +1,15 @@
 # 100 Days Of Code - 学習ログ
 
+## Day17 2020/06/20 Sat
+**学習時間**: 1時間
+
+**今日の進捗**: Prgate RubyOnRails 途中
+
+**思ったこと**: 今日はご用事なので、ノルマだけ終わらす。
+
+**リンク**
+[Twitter](https://twitter.com/neanearly/status/1274113170647310336?s=20)
+
 ## Day16 2020/06/19 Fry
 **学習時間**: 5時間
 
