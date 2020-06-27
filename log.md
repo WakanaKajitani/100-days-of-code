@@ -1,5 +1,46 @@
 # 100 Days Of Code - 学習ログ
 
+## Day21 2020/06/27 Sat
+**学習時間**: 4時間
+
+**今日の進捗**: Prgate RubyOnRails 途中
+
+**思ったこと**: 昨日退職したー！！昨日は飲んだのでおやすみ。今日はもう少しやりたかったけど、用事があるので終わり。<br>
+明後日から時間あるからね！
+
+**リンク**
+[Twitter](https://twitter.com/neanearly/status/1276759077373177856?s=20)
+
+## Day20 2020/06/25 Thu
+**学習時間**: 1時間
+
+**今日の進捗**: Prgate RubyOnRails 途中
+
+**思ったこと**: 退職前日。気が立ってるので申し訳程度に。
+
+**リンク**
+[Twitter](https://twitter.com/neanearly/status/1276131416288292864?s=20)
+
+## Day19 2020/06/24 Wed
+**学習時間**: 5時間
+
+**今日の進捗**: Prgate RubyOnRails 途中
+
+**思ったこと**: 新人指導しながら。もう少しで退職。
+
+**リンク**
+[Twitter](https://twitter.com/neanearly/status/1275778865114169345?s=20)
+
+## Day18 2020/06/23 Tue
+**学習時間**: 3時間
+
+**今日の進捗**: Prgate RubyOnRails 途中
+
+**思ったこと**: 3日開けて再開Railsを再開。Node.jsの後、Railsの書きやすさを実感
+
+**リンク**
+[Twitter](https://twitter.com/neanearly/status/1275236476830183424?s=20)
+
 ## Day17 2020/06/20 Sat
 **学習時間**: 1時間
 
