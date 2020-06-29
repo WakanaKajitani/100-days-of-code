@@ -1,5 +1,28 @@
 # 100 Days Of Code - 学習ログ
 
+## Day23 2020/06/29 Mon
+**学習時間**: 4時間
+
+**今日の進捗**: Prgate RubyOnRailsコース修了！開発パス（Ruby On n Rails）修了！
+
+**思ったこと**: おわったー！Progate,もう少しで終わるなあ。<br>
+そろそろcssあたりを本腰入れて勉強したい。次の勉強教材探すかぁ。<br>
+イラレとフォトショの練習もとWordPressも。やりたいこといっぱい！
+
+**リンク**
+[Twitter](https://twitter.com/neanearly/status/1277529210798534656?s=20)
+[Twitter](https://twitter.com/neanearly/status/1277529657760309248?s=20)
+
+## Day22 2020/06/28 Sun
+**学習時間**: 2時間
+
+**今日の進捗**: Prgate RubyOnRails 途中
+
+**思ったこと**: 夜中に申し訳程度に。Railsコースなっがいなぁ。明日は終わらす
+
+**リンク**
+[Twitter](https://twitter.com/neanearly/status/1277254579000754177?s=20)
+
 ## Day21 2020/06/27 Sat
 **学習時間**: 4時間
 
