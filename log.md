@@ -1,5 +1,28 @@
 # 100 Days Of Code - 学習ログ
 
+## Day25 2020/07/01 Wed
+**学習時間**: 4時間
+
+**今日の進捗**: ReactとGo 全コース修了！　同時にProgateの全コース修了！
+
+**思ったこと**: 100日コード、1/4達成！　Progateも全コース修了！<br>
+3年前から全コース終わらせたいと思ってたらか、悲願達成とも言える。<br>
+これからどうやって勉強していくか考えないとなぁ。やりたいこと洗い出そう。
+
+**リンク**
+[Twitter](https://twitter.com/neanearly/status/1278151239478374401?s=20)
+[Twitter](https://twitter.com/neanearly/status/1278197352596074496?s=20)
+[Twitter](https://twitter.com/neanearly/status/1278199360338059266?s=20)
+
+**学習時間**: 4時間
+
+**今日の進捗**: PHPコース修了　！HTML & CSS　のコース修了！Sass の全コース修了！
+
+**思ったこと**: 今日もたくさんやったぁ！あと、ReactとGoを丸々2コース。終わるかなぁ。
+
+**リンク**
+[Twitter](https://twitter.com/neanearly/status/1277885738336481281?s=20)
+
 ## Day23 2020/06/29 Mon
 **学習時間**: 4時間
 
